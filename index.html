@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CiD v2 Design Prototype</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/icons/icons.css">
+  <script src="https://kit.fontawesome.com/0c10c63255.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="nav-logo" src="https://dfm2brf33g8n1.cloudfront.net/wp-content/uploads/2018/05/Header-Logo.svg">
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item is-hoverable">
+        <div class="notifications-indicator is-flex is-flex-direction-row">
+          <span class="icon is-medium">
+            <i class="cd-ic-bell"></i>
+          </span>
+          <div class="notifications-counter">
+            3
+          </div>
+        </div>
+      </div>
+      <div class="navbar-item is-hoverable">
+        <a class="navbar-link is-arrowless">
+          <div class="account-avatar">
+            MM
+          </div>
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            ?
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="is-flex is-flex-direction-row is-flex-wrap-nowrap">
+
+    <div class="sidenav">
+      <div class="transaction-button-wrapper">
+        <a class="button is-primary is-fullwidth">
+          New
+        </a>
+      </div>
+      <div class="sidenav-items">
+        <a class="button is-primary is-light is-fullwidth">
+          <span class="icon is-medium">
+            <i class="cd-ic-chart"></i>
+          </span>
+          <span>Dashboard</span>
+        </a>
+        <a class="button is-primary is-light is-fullwidth">
+          <span class="icon is-medium">
+            <i class="cd-ic-paper-plane"></i>
+          </span>
+          <span>Requests</span>
+        </a>
+        <a class="button is-primary is-light is-fullwidth">
+          <span class="icon is-medium">
+            <i class="cd-ic-briefcase"></i>
+          </span>
+          <span>Accounts</span>
+        </a>
+        <a class="button is-primary is-light is-fullwidth">
+          <span class="icon is-medium">
+            <i class="cd-ic-user-group"></i>
+          </span>
+          <span>Users</span>
+        </a>
+        <a class="button is-primary is-light is-fullwidth">
+          <span class="icon is-medium">
+            <i class="cd-ic-document"></i>
+          </span>
+          <span>Bank Instructions</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="workspace">
+      <div class="page-header">
+        <div class="page-container">
+          <div class="columns">
+            <div class="header-text column is-four-fifths">
+              <h1 class="is-size-3">Jane Smith</h1>
+              <h6>Seller</h6>
+            </div>
+            <div class="action-button column has-text-right">
+              <a class="button is-primary is-light">
+                <span>Manage</span>
+                <span class="icon is-medium">
+                  <i class="cd-ic-more-square"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-container page-card has-shadow">
+        <div class="columns">
+          <div class="column is-one-quarter mr-1 has-border-right-grey">
+            <div class="page-status-indicator is-started">
+              Started
+            </div>
+            <div class="step-progress-wrapper is-flex is-flex-direction-row is-relative mb-4">
+              <div class="is-flex-grow-1">
+                <div class="progress-indicator"></div>
+                <div class="is-size-7">Opened</div>
+              </div>
+              <div class="is-flex-grow-1 has-text-centered">
+                <div class="progress-indicator"></div>
+                <div class="is-size-7">Started</div>
+              </div>
+              <div class="is-flex-grow-1 has-text-right">
+                <div class="progress-indicator"></div>
+                <div class="is-size-7">Completed</div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label>Sub-status text here</label>
+              <p>
+                User can see a description here that provides additional details and next steps if needed.
+              </p>
+            </div>
+            <div class="has-border-bottom-grey">
+              <div class="is-flex is-flex-direction-row">
+                <span class="is-flex-grow-1">Risk assessment:</span>
+                <span class="is-flex-grow-1 has-text-right">Passed</span>
+              </div>
+              <div class="is-flex is-flex-direction-row">
+                <span class="is-flex-grow-1">Multi-factor Authentication:</span>
+                <span class="is-flex-grow-1 has-text-right">Pending</span>
+              </div>
+              <div class="is-flex is-flex-direction-row">
+                <span class="is-flex-grow-1">Identity verification:</span>
+                <span class="is-flex-grow-1 has-text-right">Pending</span>
+              </div>
+            </div>
+            <div class="has-border-bottom-grey">
+              <label>Files</label>
+              <ul class="file-list">
+                <li>
+                  <div class="file-empty-state is-flex is-flex-direction-row is-justify-content-center is-align-items-center">
+                    <span class="icon">
+                      <i class="cd-ic-paper-x"></i>
+                    </span>
+                    <span>No files available</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <label>Sender details</label>
+              <div class="is-flex is-flex-direction-row">
+                <span class="is-flex-grow-1">Sent by:</span>
+                <span class="is-flex-grow-1 has-text-right">Tyler Adams</span>
+              </div>
+              <div class="is-flex is-flex-direction-row">
+                <span class="is-flex-grow-1">Email:</span>
+                <span class="is-flex-grow-1 has-text-right">t****@c****.com</span>
+              </div>
+              <div class="is-flex is-flex-direction-row">
+                <span class="is-flex-grow-1">Date sent:</span>
+                <span class="is-flex-grow-1 has-text-right">12/30/2020 08:25 AM</span>
+              </div>
+            </div>
+          </div>
+          <div class="column ml-1 pr-0 is-relative">
+            <div class="privacy-button-wrapper">
+              <button class="button is-outlined">
+                <span class="icon is-medium">
+                  <i class="cd-ic-show"></i>
+                </span>
+              </button>
+            </div>
+            <h3 class="is-size-4 mb-2">Request details</h3>
+            <div class="has-background-light p-4 is-rounded-sm mb-4">
+              <div class="columns">
+                <div class="column is-flex">
+                  <label class="is-flex-grow-1">File number</label>
+                  <span class="is-flex-grow-1 has-text-right">104-4004</span>
+                </div>
+                <div class="column is-flex">
+                  <label class="is-flex-grow-1">File number</label>
+                  <span class="is-flex-grow-1 has-text-right">104-4004</span>
+                </div>
+              </div>
+            </div>
+            <div class="has-background-light p-4 is-rounded-sm mb-4">
+              <div class="columns">
+                <div class="column">
+                  <div class="mb-4">
+                    <label>Client name</label>
+                    <div>Jane Smith</div>
+                  </div>
+                  <div class="mb-4">
+                    <label>Email</label>
+                    <div>j***@e***.com</div>
+                  </div>
+                  <div class="mb-4">
+                    <label>Phone</label>
+                    <div>(***) ***-**90</div>
+                  </div>
+                  <div class="mb-4">
+                    <label>Description</label>
+                    <div>Whatever title reps put here for confirm requests. Should be short but maybe we...</div>
+                    <a href="#">View all</a>
+                  </div>
+                  <div class="mb-4">
+                    <label>Custom message</label>
+                    <div>Whatever title reps put here for confirm requests. Should be short but maybe we...</div>
+                    <a href="#">View all</a>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="mb-4">
+                    <figure class="image is-2by1">
+                      <img src="https://bulma.io/images/placeholders/640x320.png" />
+                    </figure>
+                  </div>
+                  <div class="mb-4">
+                    <label>Property address</label>
+                    <div>
+                      **** <br />
+                      Somecity, USA *****
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label>Transaction amount</label>
+                    <div>$***,***.**</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3 class="is-size-4 mb-2">Bank instructions</h3>
+            <div class="has-border-grey p-5">
+              <div class="columns">
+                <div class="column is-half">
+                  <label>Beneficiary bank</label>
+                  <div>Bank of America, Inc.</div>
+                </div>
+                <div class="column">
+                  <label>Beneficiary bank</label>
+                  <div>Bank of America, Inc.</div>                        
+                </div>
+                <div class="column is-flex is-justify-content-flex-end is-align-items-center">
+                  <a class="button is-secondary is-small">
+                    Expand
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

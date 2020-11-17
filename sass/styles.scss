@@ -1,0 +1,327 @@
+@charset "utf-8";
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display:400');
+
+
+// CertifID Colors
+
+$blue: #2E76B5;
+$dark-blue: #162F4D;
+$red: #DB132C;
+$orange: #FFA624;
+$yellow: #FFD85A;
+$green: #61D690;
+$light-blue: #4995D7;
+$lighter-blue: #B7DEFF;
+$grey: #DDDDDD;
+$grey-light: #EEEEEE;
+$grey-lighter: #F3F3F3;
+$grey-lightest: #F9F9F9;
+
+$dark-blue-transparent: rgba(22, 47, 77, 0.90);
+$white-10: rgba(255,255,255,0.1);
+$white-15: rgba(255,255,255,0.15);
+
+$white: #FFF;
+$black: #2B3034; // high-emphasis text
+$black-bis: #555555; // medium-emphasis text
+$black-ter: #A0A2A4; // low-emphasis text
+
+$certifid-gradient: linear-gradient(90deg, rgba(97,214,144,1) 0%, rgba(46,118,181,1) 100%);
+
+// Typography
+
+$family-sans-serif: "Nunito Sans", sans-serif;
+$family-serif: "DM Serif Display", serif;
+
+// Bulma variable overrides
+
+$primary: $blue;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Custom variables
+
+$top-nav-height: 65px;
+$sidenav-width: 240px;
+
+$thicker-padding: 30px;
+$thick-padding: 20px;
+
+
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
+@import "../node_modules/bulma/sass/helpers/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+
+
+// Styles... these styles would likely live inside the single page component or separate pages?
+
+// Typography styles
+
+h1 {
+  // h1 = Page headers only
+  font-family: $family-serif;
+}
+
+h2 {
+  // h2 = Table headers only
+}
+
+h3 {
+  // h3 = Detail page subheaders and modal headers only
+}
+
+label {
+  // for input labels and small section labels
+  font-weight: $weight-bold;
+  display: inline-block;
+  margin-bottom: .25rem;
+}
+
+.icon.is-medium {
+  font-size: 1.5em;
+}
+
+// Start custom helper classes
+
+.has-shadow {
+  box-shadow: 0 1px 4px 0px rgba(0,0,0,.10);
+}
+
+.is-rounded-lg {
+  border-radius: $radius-large;
+}
+
+.is-rounded-sm {
+  border-radius: $radius;
+}
+
+.has-border-grey {
+  border: 1px solid $grey-light;
+}
+
+.has-border-right-grey {
+  border-right: 1px solid $grey-light;
+}
+
+.has-border-bottom-grey {
+  border-bottom: 1px solid $grey-light;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+
+// End custom helper classes
+
+// Start layout 
+
+.main-wrapper,
+.sidenav {
+  min-height: calc(100vh - #{$top-nav-height})
+}
+
+.workspace {
+  width: calc(100vw - #{$sidenav-width})
+}
+
+.page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.top-offset-40 {
+  margin-top: -40px;
+}
+
+// End layout
+
+// Start buttons 
+
+.button {
+  border-radius: $radius-large;
+  font-size: 1rem;
+  font-weight: $weight-semibold;
+}
+
+.button.is-primary.is-light {
+  background-color: $white-10;
+  color: $white;
+  :hover {
+    background-color: $white-15;
+    color: $light-blue;
+  }
+}
+
+// End button
+
+// Start top nav
+
+.navbar {
+  height: $top-nav-height;
+  padding: 0 20px;
+  background: $white;
+}
+
+.navbar-item img {
+  max-height: 44px;
+}
+
+.navbar-brand {
+  min-width: calc(#{$sidenav-width} - 20px);
+  border-right: 1px solid $grey-light;
+}
+
+.account-avatar {
+  width: 31px;
+  height: 31px;
+  border-radius: 999px;
+  background: $dark-blue;
+  color: $white;
+  text-align: center;
+  line-height: 31px;
+  font-size: .75rem;
+  font-weight: $weight-bold;
+}
+
+.navbar-end {
+  padding-left: 20px;
+  border-left: 1px solid $grey-light;
+}
+
+.navbar-link:hover {
+  background-color: $white;
+}
+
+.notifications-indicator {
+  align-items: center;
+  justify-content: center;
+  background-color: $grey-lighter;
+  border-radius: 9999px;
+  padding: 2px 8px 2px 5px;
+}
+
+.notifications-counter {
+  display: block;
+  width: 21px;
+  height: 21px;
+  text-align: center;
+  margin-left: 5px;
+  border-radius: 9999px;
+  color: #fff;
+  background: $red;
+  line-height: 21px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+// End top nav
+
+// Start side nav 
+
+.sidenav {
+  width: $sidenav-width;
+  background-color: $dark-blue;
+  padding: 20px;
+}
+
+.transaction-button-wrapper {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.sidenav-items {
+  padding: 20px 0;
+}
+
+.sidenav-items .button {
+  text-align: left;
+  justify-content: left;
+  margin-bottom: 10px;
+  color: $white;
+}
+
+// End side nav
+
+// Start page header 
+
+.page-header {
+  background-color: $dark-blue-transparent;
+  color: $white;
+  width: 100%;
+  padding-top: 40px;
+  min-height: 165px;
+}
+
+// End page header
+
+// Start page elements
+
+.page-card {
+  padding: $thicker-padding;
+  background-color: $white;
+  border-radius: $radius;
+  margin-top: -40px;
+}
+
+.privacy-button-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.page-status-indicator {
+  padding: 8px;
+  width: 100%;
+  text-align: center;
+  border-radius: 999px;
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.page-status-indicator.is-started {
+  background-color: $blue;
+}
+
+.progress-indicator {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  border-radius: 9999px;
+  border: 1px solid $grey;
+  background: $white;
+}
+
+.step-progress-wrapper > div {
+  z-index: 1;
+}
+
+.step-progress-wrapper::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: $grey;
+  position: absolute;
+  z-index: 0;
+  top: 9px;
+}
+
+.file-empty-state {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid $grey;
+  border-radius: $radius;
+}
+
+// End page elements
+
